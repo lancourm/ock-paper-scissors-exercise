@@ -1,8 +1,12 @@
 # game.py
 
+import os
+from dotenv import load_dotenv
+load_dotenv()
+USER_NAME = os.getenv("USER_NAME", default="Player One")
 import random
 
-print ("Hello and welcome to the game! Strap in and hang on!")
+print ("Hello and welcome to the game. Strap in and hang on tight", USER_NAME)
 
 print("Rock, Paper, Scissors, Shoot!")
 
@@ -29,17 +33,17 @@ print("The computer chose:", computer_choice)
 
 if user_choice == computer_choice:
     print ("It's a tie! Play again.")
-if (user_choice == "rock") and (computer_choice == "scissors" ):  
+elif (user_choice == "rock") and (computer_choice == "scissors" ):  
     print("Yay! You won!")
-if(user_choice == "rock") and (computer_choice == "paper"):
+elif(user_choice == "rock") and (computer_choice == "paper"):
     print("Oh no, you lost this round.")
-if (user_choice == "paper") and (computer_choice == "scissors"):
+elif (user_choice == "paper") and (computer_choice == "scissors"):
     print ("You lost. Bummer. Try again.")
-if (user_choice == "paper") and (computer_choice == "rock"):
+elif (user_choice == "paper") and (computer_choice == "rock"):
     print ("Hey! You won! Congrats!")
-if (user_choice == "scissors") and (computer_choice == "rock"):
+elif (user_choice == "scissors") and (computer_choice == "rock"):
     print ("SMASHED! Sorry, you lose. Try again.")
-if (user_choice == "scissors") and (computer_choice == "paper"):
+elif (user_choice == "scissors") and (computer_choice == "paper"):
     print ("Wahoo! Shredded the competition ;)")
 
 print ("The game is over. Thanks for playing!")
