@@ -2,6 +2,8 @@
 
 import random
 
+print ("Hello and welcome to the game! Strap in and hang on!")
+
 print("Rock, Paper, Scissors, Shoot!")
 
 user_choice = input("Please choose one of 'rock', 'paper', 'scissors': ")
@@ -16,14 +18,28 @@ print("USER CHOICE: ", user_choice)
 #...and we'll ask the user to run the program again
 
 if (user_choice == "rock") or (user_choice == "paper") or (user_choice == "scissors"):
-    print("VALID. KEEP GOING")
+    print("You chose:", user_choice)
 else:
     print("OOPS, invalid input. Please try again.")
     exit()
 
 valid_options = ["rock", "paper", "scissors"]
 computer_choice = random.choice(valid_options)
-print("COMPUTER CHOICE: ", computer_choice)
+print("The computer chose:", computer_choice)
 
+if user_choice == computer_choice:
+    print ("It's a tie! Play again.")
+if (user_choice == "rock") and (computer_choice == "scissors" ):  
+    print("Yay! You won!")
+if(user_choice == "rock") and (computer_choice == "paper"):
+    print("Oh no, you lost this round.")
+if (user_choice == "paper") and (computer_choice == "scissors"):
+    print ("You lost. Bummer. Try again.")
+if (user_choice == "paper") and (computer_choice == "rock"):
+    print ("Hey! You won! Congrats!")
+if (user_choice == "scissors") and (computer_choice == "rock"):
+    print ("SMASHED! Sorry, you lose. Try again.")
+if (user_choice == "scissors") and (computer_choice == "paper"):
+    print ("Wahoo! Shredded the competition ;)")
 
-print ("THIS IS THE END OF OUR GAME. PLEASE PLAY AGAIN.")
+print ("The game is over. Thanks for playing!")
