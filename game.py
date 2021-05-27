@@ -1,12 +1,16 @@
 # game.py
 
 import os
-from dotenv import load_dotenv
-load_dotenv()
-USER_NAME = os.getenv("USER_NAME", default="Player One")
+
+
+
+player_name = os.getenv("player_name")
+print (player_name)
+
+
 import random
 
-print ("Hello and welcome to the game. Strap in and hang on tight", USER_NAME)
+print ("Hello and welcome to the game. Strap in and hang on tight", player_name)
 
 print("Rock, Paper, Scissors, Shoot!")
 
