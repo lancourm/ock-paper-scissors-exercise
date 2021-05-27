@@ -2,10 +2,11 @@
 
 import os
 
+import dotenv
 
+dotenv.load_dotenv()
 
 player_name = os.getenv("player_name")
-print (player_name)
 
 
 import random
